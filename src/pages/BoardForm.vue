@@ -31,6 +31,7 @@ export default {
             board: {
                 email: '',
                 password: ''
+
             }
         };
     },
