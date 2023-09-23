@@ -14,6 +14,7 @@
                 <input type="radio" v-model="board.good" value="Python"> Python
             </label><br>
             <label>
+
                 <input type="radio" v-model="board.good" value="Java"> Java
             </label><br>
             <button type="submit">가입하기</button>
