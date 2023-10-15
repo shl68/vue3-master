@@ -22,7 +22,7 @@
                                     <h6 class="my-0">{{ i.name }}</h6>
                                 </div>
                                 <span class="text-muted">
-                                    {{ lib.getNumberFormatted(i.price/10) }}P
+                                    {{ lib.getNumberFormatted(i.price / 10) }}P
                                 </span>
                             </li>
                         </ul>
@@ -47,7 +47,13 @@
                                         id="address"
                                         v-model="state.form.address">
                                 </div>
-
+                                <div class="col-12"><label for="address" class="form-label">적립포인트</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="payment"
+                                        v-model="state.form.payment">
+                                </div>
                             </div>
                             <!--                            <hr class="my-4">-->
                             <!--                            <h4 class="mb-3">결제 수단</h4>-->
@@ -115,7 +121,7 @@ export default {
             let result = 0;
 
             for (let i of state.items) {
-                result += i.price/10;
+                result += i.price / 10;
             }
             return result;
         })
